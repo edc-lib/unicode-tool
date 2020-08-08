@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.jin4074.unicodetool.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.jin4074.unicodetool.MyBundle
 
 class MyApplicationService {
 
