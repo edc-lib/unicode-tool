@@ -39,6 +39,7 @@ repositories {
 }
 dependencies {
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.10.0")
+    implementation("org.apache.commons:commons-text:1.9")
 }
 
 // Configure gradle-intellij-plugin plugin.

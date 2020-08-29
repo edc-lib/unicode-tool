@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.github.jin4074.unicodetool</id>
+    <id>com.jin4074.unicodetool</id>
     <name>unicode-tool</name>
     <vendor>jin4074</vendor>
 
@@ -7,13 +7,33 @@
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.jin4074.unicodetool.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.jin4074.unicodetool.services.MyProjectService"/>
-    </extensions>
 
-    <projectListeners>
-        <listener class="com.github.jin4074.unicodetool.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </projectListeners>
+    <actions>
+        <group id="EncodePopGroup" text="EncodeSelect" popup="true" description="Encode select string">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <action id="com.jin4074.unicodetool.SelectEscapeUnicodeAction"
+                    class="com.jin4074.unicodetool.SelectEscapeUnicodeAction"
+                    text="Escape Unicode"
+                    description="Escape unicode">
+            </action>
+            <action id="com.jin4074.unicodetool.SelectUnescapeUnicodeAction"
+                    class="com.jin4074.unicodetool.SelectUnescapeUnicodeAction"
+                    text="Unescaped Unicode"
+                    description="Unescaped unicode">
+            </action>
+        </group>
+        <group id="EncodeGenerateGroup" text="EncodeCurrentFile" popup="true" description="Encode current file">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <action id="com.jin4074.unicodetool.FileEscapeUnicodeAction"
+                    class="com.jin4074.unicodetool.FileEscapeUnicodeAction"
+                    text="Escape Unicode"
+                    description="Escape To unicode">
+            </action>
+            <action id="com.jin4074.unicodetool.FileUnescapeUnicodeAction"
+                    class="com.jin4074.unicodetool.FileUnescapeUnicodeAction"
+                    text="Unescaped Unicode"
+                    description="Unescaped unicode">
+            </action>
+        </group>
+    </actions>
 </idea-plugin>
