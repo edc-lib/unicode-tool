@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.jin4074.unicodetool</id>
-    <name>unicode-tool</name>
+    <name>Unicode-Tool</name>
     <vendor>jin4074</vendor>
 
     <!-- Product and plugin compatibility requirements -->
@@ -35,5 +35,11 @@
                     description="Unescaped unicode">
             </action>
         </group>
+<!--        <action id="com.jin4074.unicodetool.FileEscapeUnicodeAction"-->
+<!--                class="com.jin4074.unicodetool.FileEscapeUnicodeAction"-->
+<!--                text="Escape Unicode"-->
+<!--                description="Escape To unicode">-->
+<!--            <add-to-group group-id="Prop" anchor="first"/>-->
+<!--        </action>-->
     </actions>
 </idea-plugin>
